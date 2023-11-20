@@ -22,6 +22,9 @@ jobs:
       - name: Print working directory
         run: |
           echo "Current working directory: $GITHUB_WORKSPACE"
+      - name: Print working directory
+        run: |
+          echo "Current working directory: $(pwd)"
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -31,7 +34,7 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "Index.html" # App source code path
+          app_location: "/home/runner/work/Adreaae/Adreaae/Index.html" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "/" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
